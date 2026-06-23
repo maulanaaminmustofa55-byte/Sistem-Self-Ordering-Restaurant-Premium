@@ -1,0 +1,263 @@
+:root {
+    --bg-dark: #0d0c0a;
+    --bg-card: #1a1814;
+    --gold: #c9a03d;
+    --gold-light: #e2c28b;
+    --red: #b55b3c;
+    --red-dark: #8b3a22;
+    --green: #4a7c59;
+    --text: #e8e0d5;
+    --text-dim: #a89f92;
+    --border: #2a2620;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0d0c0a;
+    font-family: 'Segoe UI', 'Poppins', system-ui, -apple-system, sans-serif;
+    color: var(--text);
+    min-height: 100vh;
+}
+
+/* navbar lebih santai */
+.navbar {
+    background: #0d0c0a !important;
+    border-bottom: 1px solid #2a2620;
+    padding: 12px 20px;
+}
+
+.navbar-brand {
+    font-size: 1.1rem !important;
+    font-weight: 500;
+    letter-spacing: 0;
+    color: var(--gold) !important;
+}
+
+.navbar-brand i {
+    font-size: 0.9rem;
+    color: var(--gold);
+}
+
+#jam {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    background: #1a1814;
+    padding: 5px 12px;
+    border-radius: 40px;
+    border: 1px solid #2a2620;
+    color: var(--gold-light);
+}
+
+/* card pesanan - gaya lebih organik */
+.card-pesanan-custom {
+    background: #1a1814;
+    border: 1px solid #2a2620;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    overflow: hidden;
+    transition: all 0.2s ease;
+    animation: fadeInUp 0.4s ease;
+    height: 100%;
+}
+
+.card-pesanan-custom:hover {
+    transform: translateY(-3px);
+    border-color: var(--gold);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.5);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.meja-badge {
+    background: #2a241c;
+    padding: 12px 16px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    border-bottom: 1px solid #332d24;
+}
+
+.queue-badge {
+    background: #0d0c0a;
+    color: var(--gold-light);
+    padding: 4px 12px;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.nama-pelanggan {
+    color: var(--gold-light);
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    word-break: break-word;
+}
+
+.waktu-tunggu {
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    background: rgba(255,255,255,0.05);
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 30px;
+    font-weight: 400;
+}
+
+.detail-menu {
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 1.5;
+    min-height: 70px;
+    color: #bbb2a5;
+    background: #13110e;
+    padding: 12px;
+    border-radius: 14px;
+    margin-top: 8px;
+    font-family: monospace;
+    word-break: break-word;
+    white-space: pre-wrap;
+}
+
+.btn-selesai {
+    background: #4a7c59;
+    border: none;
+    padding: 12px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    width: 100%;
+    transition: all 0.2s ease;
+    letter-spacing: 0;
+    color: white;
+    border-radius: 0;
+}
+
+.btn-selesai:hover {
+    background: #5a906b;
+    transform: none;
+    filter: brightness(1.02);
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.col, [class*="col-"] {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.text-secondary {
+    color: var(--text-dim) !important;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    background: #1a1814;
+    border-radius: 24px;
+    border: 1px solid #2a2620;
+}
+
+.loading-spinner {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(201,160,61,0.2);
+    border-radius: 50%;
+    border-top-color: var(--gold);
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1814;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 10px;
+}
+
+/* responsive */
+@media (max-width: 480px) {
+    .navbar-brand {
+        font-size: 0.85rem !important;
+    }
+    .meja-badge {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+    .nama-pelanggan {
+        font-size: 0.95rem;
+    }
+    .detail-menu {
+        font-size: 0.7rem;
+    }
+    .btn-selesai {
+        padding: 10px;
+        font-size: 0.75rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    .navbar {
+        padding: 15px 30px;
+    }
+    .navbar-brand {
+        font-size: 1.3rem !important;
+    }
+    #jam {
+        font-size: 1rem;
+        padding: 8px 20px;
+    }
+}
+
+/* toast notification */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
