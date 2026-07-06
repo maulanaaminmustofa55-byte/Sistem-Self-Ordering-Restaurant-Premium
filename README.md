@@ -1,4 +1,5 @@
 # Seafood Amin
+Nama: Maulana Amin Mustofa NIM: 101230047 Kelas: TF23C
 
 Sistem pemesanan dan kitchen display untuk restoran Seafood Amin berbasis PHP, MySQL, dan frontend responsif.
 
